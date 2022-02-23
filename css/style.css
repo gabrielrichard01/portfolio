@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap');
+
+:root{
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-body: 'Crimson Pro', sans-serif;
+    --fonte-header: 'Courgette', cursive;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fonte-padrao);
+    background-color: black
+}
+
+#menu a{
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--fonte-header);
+    font-size: 1.5em;
+    display: block;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+#menu a:hover{
+    background: black;
+    transition: all .5s;
+}
+
+.logo{
+    font-size: 28px;
+    font-family: var(--fonte-header);
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#header{
+    width: 100%;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(8, 95, 8);
+    position: fixed;
+}
+
+#menu{
+    display: flex;
+    list-style: none;
+}
+
+#btn-mobile{
+    display: none;
+}
+
+@media (max-width: 750px){
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        top: 70px;
+        right: 0px;
+        background: rgb(8, 95, 8);
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow: hidden;
+    }
+
+    #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+    }
+
+    #menu a{
+        padding: 18px;
+        margin: 10px;
+    }
+
+    #btn-mobile{
+        display: block;
+        padding: .5rem 1rem;
+        margin: 5px;
+        font-size: 2em;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    .sobre p{
+        text-align: justify;
+    }
+
+
+}
+
+@media screen and (max-width: 520px){
+    
+}
+
+#main{
+    padding-top: 54px;
+}
+
+section{
+    color: white;
+    font-family: var(--fonte-body);
+    text-align: center;
+}
+
+.home{
+    height: 47.5rem;
+}
+
+.home h1{
+    font-size: 5em;
+    font-family: var(--fonte-body);
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5rem;
+}
+
+.home h2{
+    font-size: 2.5em;
+    font-family: var(--fonte-body);
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.home span{
+    color: rgb(8, 95, 8);
+}
+
+.perfil{
+    border-radius: 50%;
+    margin-top: 24px;
+}
+
+.sobre{
+    background-color: rgb(8, 95, 8);
+    height: 40.5rem;
+}
+
+.sobre h2{
+    font-size: 3.5em;
+    font-family: var(--fonte-body);
+    font-weight: bold;
+    color: black;
+    padding-top: 140px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sobre p{
+    width: 70%;
+    font-size: 1.5em;
+    font-family: var(--fonte-body);
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+}
+
+.sobre h3{
+    font-size: 2.5em;
+    font-family: var(--fonte-body);
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 50px;
+}
+
+.sobre img{
+    width: 50px;
+    margin: 10px;
+    text-align: center;
+}
+
+.projeto{
+    height: 40.5rem;
+}
+
+.projeto h2{
+    font-size: 3.5em;
+    font-family: var(--fonte-body);
+    font-weight: bold;
+    color: white;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.pro{
+    border: 2px solid green;
+    width: 380px;
+    height: 420px;
+    padding: 10px;
+    margin: auto;
+}
+
+.pro img{
+    width: 350px;
+}
+
+.pro span{
+    color: rgb(8, 95, 8);
+}
+
+.pro p{
+    font-size: 1.5em;
+    font-family: var(--fonte-body);
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.pro h3{
+    font-size: 24px;
+    font-family: var(--fonte-body);
+    font-weight: bold;
+    color: rgb(8, 95, 8);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.pro li{
+    list-style-type: none;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.contato{
+    height: 35rem;
+    background-color: rgb(8, 95, 8);
+}
+
+.contato h2{
+    font-size: 3.5em;
+    font-family: var(--fonte-body);
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.contato p{
+    font-size: 2em;
+    font-family: var(--fonte-body);
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.con{
+    border: 2px solid black;
+    width: 400px;
+    padding: 50px;
+    margin: auto;
+}
+
+.con a{
+    text-decoration: none;
+}
+
+.con img{
+    width: 50px;
+    margin: 10px;
+}
+
+.con li{
+    list-style-type: none;
+    display: inline-block;
+}
